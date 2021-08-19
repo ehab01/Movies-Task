@@ -1,0 +1,3 @@
+var trendingModel = {
+    trendingMovies: []
+  };
