@@ -12,7 +12,9 @@ var trendingView = {
       var nowPlayingrendered = Mustache.render(this.template, trendingModel.trendingMovies);
       document.getElementById("trending").innerHTML = nowPlayingrendered;
       console.log(trendingModel.trendingMovies);
-      loadGliderSingleSlide("glider-trending");
+      loadGliderSingleSlide(".glider-trending");
+
+
     }
   };
   
