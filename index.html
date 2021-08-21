@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="canonical" href="http://www.themoviedb.org/">
+    <link rel="canonical" href="http://www.themoviedb.org/" />
     <link rel="stylesheet" href="assets/styles/styles.css" />
+    <link rel="stylesheet" href="assets/styles/nav.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -29,17 +30,131 @@
       type="text/javascript"
       src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"
     ></script>
-
     <script src="https://unpkg.com/mustache@latest"></script>
-
-   
-
     <title>Movies</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body >
-   
+  <body>
+    <!--Nav bar section starts-->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light nav-color">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Navbar brand -->
+          <a class="navbar-brand mt-2 mt-lg-0 text-light" href="#">
+            CINE APP
+          </a>
+          <!-- Left links -->
+          <form class="form-inline center-form">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control nav-search"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+          </form>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+
+        <!-- Right elements -->
+        <div class="d-flex align-items-center">
+          <!-- Icon -->
+          <a class="text-reset me-3" href="#">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+
+          <!-- Notifications -->
+          <a
+            class="text-reset me-3 dropdown-toggle hidden-arrow"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fas fa-bell"></i>
+            <span class="badge rounded-pill badge-notification bg-danger"
+              >1</span
+            >
+            <i style="color: black" class="bi bi-bell"></i>
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+            <li>
+              <a class="dropdown-item" href="#">Some news</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Another news</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+
+          <!-- Avatar -->
+
+          <img
+            src="https://mdbootstrap.com/img/new/avatars/2.jpg"
+            class="rounded-circle"
+            height="25"
+            alt=""
+            loading="lazy"
+          />
+          <small class="text-light">Ihab Ahmed</small>
+          <a
+            class="dropdown-toggle d-flex align-items-center hidden-arrow"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+            <li>
+              <a class="dropdown-item" href="#">My profile</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Settings</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Right elements -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+    <!--Nav bar section starts-->
+
     <!--Now Playing section starts-->
     <section id="carousel">
       <div class="container">
@@ -50,11 +165,10 @@
     </section>
     <!--Now Playing section ends-->
 
-
     <!--top rated section starts-->
     <section id="carousel">
       <div class="container">
-        <h2 class="text-light">Top Rated</h2>
+        <h5 class="text-light">Top Rated</h5>
         <div id="top-rated"></div>
 
         <div role="tablist" class="dots"></div>
@@ -62,10 +176,10 @@
     </section>
     <!--top rated section ends-->
 
-     <!--trending section starts-->
-     <section id="carousel">
+    <!--trending section starts-->
+    <section id="carousel">
       <div class="container">
-        <h2 class="text-light">Trending</h2>
+        <h5 class="text-light">Trending</h5>
         <div id="trending"></div>
 
         <div role="tablist" class="dots"></div>
@@ -73,17 +187,15 @@
     </section>
     <!--trending section ends-->
 
-
-     
-
-      <script src="./assets/js/glider-loader.js"></script>
+    <script src="./assets/js/glider-loader.js"></script>
     <script src="./assets/js/vendors/Glider/glider.js"></script>
     <link
       rel="stylesheet"
       type="text/css"
       href="./assets/js/vendors/Glider/glider.css"
-    />  <script src="./assets/js/common/services.js"></script>
-      <!--Now playing module-->
+    />
+    <script src="./assets/js/common/services.js"></script>
+    <!--Now playing module-->
     <script src="./assets/js/now-playing/model.js"></script>
     <script src="./assets/js/now-playing/view.js"></script>
     <script src="./assets/js/now-playing/controller.js"></script>
@@ -92,11 +204,10 @@
     <script src="./assets/js/categories/trending/trending-model.js"></script>
     <script src="./assets/js/categories/trending/trending-view.js"></script>
     <script src="./assets/js/categories/trending/trending-controller.js"></script>
-      <!--trending module-->
-      <script src="./assets/js/categories/top-rated/top-rated-model.js"></script>
-      <script src="./assets/js/categories/top-rated/top-rated-view.js"></script>
-      <script src="./assets/js/categories/top-rated/top-rated-controller.js"></script>
+    <!--trending module-->
+    <script src="./assets/js/categories/top-rated/top-rated-model.js"></script>
+    <script src="./assets/js/categories/top-rated/top-rated-view.js"></script>
+    <script src="./assets/js/categories/top-rated/top-rated-controller.js"></script>
     <script src="./assets/js/main.js"></script>
-
   </body>
 </html>

@@ -1,8 +1,9 @@
 function loadGlider() {
   let glider = new Glider(document.querySelector(".glider"), {
     slidesToShow: 1.2,
-          slidesToScroll: 1,
+    slidesToScroll: 1,
     draggable: true,
+
     responsive: [
       {
         breakpoint: 300,
@@ -46,7 +47,7 @@ function loadGlider() {
           nextIndex = 0;
         }
         slider.scrollItem(nextIndex);
-nextIndex+=1;
+        nextIndex += 1;
       }, miliseconds);
     }
 
@@ -61,11 +62,10 @@ nextIndex+=1;
   sliderAuto(glider, 5000);
 }
 
-
 function loadGliderSingleSlide(selector) {
   let newglider = new Glider(document.querySelector(selector), {
     slidesToShow: 6.2,
-          slidesToScroll: 1,
+    slidesToScroll: 1,
     draggable: true,
     responsive: [
       {
@@ -110,7 +110,7 @@ function loadGliderSingleSlide(selector) {
           nextIndex = 0;
         }
         slider.scrollItem(nextIndex);
-nextIndex+=1;
+        nextIndex += 1;
       }, miliseconds);
     }
 
