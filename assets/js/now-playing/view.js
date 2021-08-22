@@ -7,7 +7,7 @@ var view = {
      <div class="card-img-overlay">
        <h5 class="card-title"><small class="text-muted">Now Playing</small></h5>
        <h1 class="card-text text-light">{{title}}</h1>
-       <p class="card-text">Last updated 3 mins ago</p>
+      
      </div>
    </div>
    {{/results}}
