@@ -14,7 +14,7 @@ var topRatedView = {
       topRatedModel.topRatedMovies
     );
     document.getElementById("top-rated").innerHTML = topRatedRendered;
-    console.log(topRatedModel.topRatedMovies);
+  
     loadGliderSingleSlide(".glider-top-rated");
   },
 };

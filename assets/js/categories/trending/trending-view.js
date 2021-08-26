@@ -11,7 +11,7 @@ var trendingView = {
     init() {
       var nowPlayingrendered = Mustache.render(this.template, trendingModel.trendingMovies);
       document.getElementById("trending").innerHTML = nowPlayingrendered;
-      console.log(trendingModel.trendingMovies);
+   
       loadGliderSingleSlide(".glider-trending");
 
 

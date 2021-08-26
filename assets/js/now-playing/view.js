@@ -15,7 +15,7 @@ var view = {
    </div>`,
     init() {
       var rendered = Mustache.render(this.template, model.theatrMovies);
-      console.log(model.theatrMovies);
+   
       document.getElementById("now-playing").innerHTML = rendered;
       loadGlider();
     }
